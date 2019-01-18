@@ -1,0 +1,31 @@
+{
+  "name": "blog.github.io",
+  "version": "1.0.0",
+  "description": "xiaohui's blog",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server -c build/webpack.config.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SleepingCat-xiaohui/SleepingCat-xiaohui.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SleepingCat-xiaohui/SleepingCat-xiaohui.github.io/issues"
+  },
+  "homepage": "https://github.com/SleepingCat-xiaohui/SleepingCat-xiaohui.github.io#readme",
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
