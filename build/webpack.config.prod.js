@@ -1,4 +1,5 @@
 const Html = require('html-webpack-plugin')
+const Clean = require('clean-webpack-plugin')
 const path = require('path')
 
 function resolve (...dirs) {
@@ -24,12 +25,10 @@ module.exports = {
     ],
   },
   plugins: [
+    new Clean(['index.html', 'public'], { root: resolve() }),
     new Html({
+      filename: resolve('index.html'),
       template: resolve('src/template.html'),
     }),
   ],
-  devtool: 'source-map',
-  devServer: {
-    contentBase: resolve('public'),
-  },
 }
