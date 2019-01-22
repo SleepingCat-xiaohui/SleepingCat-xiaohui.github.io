@@ -10,10 +10,11 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style >
 .app {
-  h1 {
-    color: blue;
-  }
+  display: flex;
+}
+h1 {
+  color: blue;
 }
 </style>
