@@ -38,8 +38,10 @@ module.exports = {
       test: /\.js$/,
       use: 'babel-loader',
     }, {
-      test: /\.sc?ss$/,
+      test: /\.s?css$/,
       use: [{
+        loader: 'style-loader',
+      }, {
         loader: 'css-loader',
       }, {
         loader: 'postcss-loader',

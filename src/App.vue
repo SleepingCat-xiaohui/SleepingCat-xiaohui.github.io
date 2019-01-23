@@ -7,14 +7,15 @@
 <script>
 export default {
 
-}
+};
 </script>
 
-<style >
+<style lang="scss">
 .app {
   display: flex;
-}
-h1 {
-  color: blue;
+
+  h1 {
+    color: blue;
+  }
 }
 </style>

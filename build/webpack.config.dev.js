@@ -37,14 +37,13 @@ module.exports = {
         test: /\.js$/,
         use: 'babel-loader',
       }, {
-        test: /\.css$/,
+        test: /\.s?css$/,
         use: [{
+          loader: 'style-loader',
+        }, {
           loader: 'css-loader',
-        }],
-      }, {
-        test: /\.scss$/,
-        use: [{
-          loader: 'css-loader',
+        }, {
+          loader: 'postcss-loader',
         }, {
           loader: 'sass-loader',
         }],
