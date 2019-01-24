@@ -28,7 +28,6 @@ module.exports = merge({}, {
         enforce: 'pre',
         options: {
           formatter: require('eslint-friendly-formatter'),
-          fix: true,
         },
       }, {
         test: /\.vue$/,

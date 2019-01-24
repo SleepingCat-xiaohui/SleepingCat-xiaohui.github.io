@@ -2,6 +2,8 @@ const merge = require('webpack-merge')
 const Html = require('html-webpack-plugin')
 const Clean = require('clean-webpack-plugin')
 const Uglify = require('uglifyjs-webpack-plugin')
+const Minicss = require('mini-css-extract-plugin')
+const Optimizecss = require('optimize-css-assets-webpack-plugin')
 const path = require('path')
 const config = require('./webpack.config.base')
 
@@ -15,7 +17,7 @@ module.exports = merge(config, {
     rules: [{
       test: /\.s?css$/,
       use: [{
-        loader: 'style-loader',
+        loader: Minicss.loader,
       }, {
         loader: 'css-loader',
       }, {
@@ -31,6 +33,9 @@ module.exports = merge(config, {
       filename: resolve('index.html'),
       template: resolve('src/template.html'),
     }),
+    new Minicss({
+      filename: '[name].[chunkhash:6].css',
+    }),
   ],
   optimization: {
     runtimeChunk: {
@@ -38,12 +43,15 @@ module.exports = merge(config, {
     },
     minimizer: [
       new Uglify({
+        cache: true,
+        parallel: true,
         uglifyOptions: {
           output: {
             comments: false,
           },
         },
       }),
+      new Optimizecss({}),
     ],
     splitChunks: {
       chunks: 'all',
