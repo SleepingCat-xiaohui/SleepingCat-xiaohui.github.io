@@ -13,6 +13,7 @@ module.exports = merge({}, {
   output: {
     path: resolve('public'),
     filename: '[name].[chunkhash:6].js',
+    publicPath: '/public/',
   },
   resolve: {
     alias: {

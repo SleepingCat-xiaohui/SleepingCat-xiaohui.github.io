@@ -1,9 +1,11 @@
 <template>
   <div>
-    <router-view />
+    222
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+
+}
 </script>
